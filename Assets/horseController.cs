@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class horseController : MonoBehaviour
 {
@@ -21,6 +22,10 @@ public class horseController : MonoBehaviour
     public Image lostScreen;
     Color lostColor = new Color(1f, 1f, 1f, 1f);
     public restartGame theGameManager;
+
+    public float restartTime;
+    bool restartNow = false;
+    float resetTime;
 
     // Start is called before the first frame update
     void Start()
@@ -62,9 +67,17 @@ public class horseController : MonoBehaviour
         if (!alive)
         {
             lostScreen.color = lostColor;
-            Destroy(gameObject);
-            theGameManager.restartTheGame();
+            //Destroy(gameObject);
+            restartNow = true;
+            resetTime = Time.time + restartTime;
+            alive = !alive;
         }
+
+        if (restartNow && resetTime <= Time.time)
+        {
+            SceneManager.LoadScene(0);
+        }
+
     }
 
     void flip()
@@ -79,4 +92,5 @@ public class horseController : MonoBehaviour
     {
         alive = isAlive;
     }
+
 }

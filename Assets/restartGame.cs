@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class restartGame : MonoBehaviour
 {
@@ -15,12 +16,11 @@ public class restartGame : MonoBehaviour
     }
 
     // Update is called once per frame
-    [System.Obsolete]
     void Update()
     {
         if(restartNow && resetTime <= Time.time)
         {
-            Application.LoadLevel(0);
+            SceneManager.LoadScene(0);
         }
         
     }
