@@ -21,7 +21,6 @@ public class horseController : MonoBehaviour
     public bool alive = true;
     public Image lostScreen;
     Color lostColor = new Color(1f, 1f, 1f, 1f);
-    public restartGame theGameManager;
 
     public float restartTime;
     bool restartNow = false;
