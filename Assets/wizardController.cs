@@ -7,17 +7,19 @@ public class wizardController : MonoBehaviour
     Rigidbody2D myRB;
     Animator myAnim;
 
-    bool facingRight;
-    public float maxSpeed;
+    public float speed;
 
     public bool horseInCloseArea = false;
+
+    float y;
 
     // Start is called before the first frame update
     void Start()
     {
         myRB = GetComponent<Rigidbody2D>();
         myAnim = GetComponent<Animator>();
-        facingRight = true;
+
+        y = myRB.velocity.y;
 
     }
 
@@ -33,14 +35,14 @@ public class wizardController : MonoBehaviour
         {
             myAnim.SetBool("seesTheHorse", horseInCloseArea);
 
-            myRB.velocity = new Vector2(1 * maxSpeed, myRB.velocity.y);
+            myRB.velocity = new Vector2(1 * speed, y);
         }
 
         if (!horseInCloseArea)
         {
             myAnim.SetBool("seesTheHorse", horseInCloseArea);
 
-            myRB.velocity = new Vector2(0 * maxSpeed, myRB.velocity.y);
+            myRB.velocity = new Vector2(0 * speed, y);
         }
        
     }

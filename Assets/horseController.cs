@@ -26,6 +26,9 @@ public class horseController : MonoBehaviour
     bool restartNow = false;
     float resetTime;
 
+    bool foundTheOwner = false;
+    touchTheHorse owner;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -77,6 +80,15 @@ public class horseController : MonoBehaviour
             SceneManager.LoadScene(0);
         }
 
+        if (foundTheOwner)
+        {
+            myAnim.SetBool("canBend", foundTheOwner);
+            owner = gameObject.GetComponent<touchTheHorse>();
+            owner.setHorseHasBended(true);
+            
+            // make it impossible to move
+        }
+
     }
 
     void flip()
@@ -91,5 +103,13 @@ public class horseController : MonoBehaviour
     {
         alive = isAlive;
     }
+
+    public void setFoundTheOwner(bool found)
+    {
+        foundTheOwner = found;
+    }
+
+
+
 
 }
