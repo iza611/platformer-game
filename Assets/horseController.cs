@@ -11,6 +11,9 @@ public class horseController : MonoBehaviour
 
     bool facingRight;
     public float maxSpeed;
+   /* public AudioClip horseGallop;
+    AudioSource horseAS;
+    bool playedGallop = false;*/
 
     bool isGrounded = true;
     public float jumpHeight;
@@ -27,13 +30,15 @@ public class horseController : MonoBehaviour
     float resetTime;
 
     bool foundTheOwner = false;
-    touchTheHorse owner;
+    public Image winningScreen;
+    Color winningColor = new Color(1f, 1f, 1f, 1f);
 
     // Start is called before the first frame update
     void Start()
     {
         myRB = GetComponent<Rigidbody2D>();
         myAnim = GetComponent<Animator>();
+
         facingRight = true;
     }
 
@@ -54,6 +59,12 @@ public class horseController : MonoBehaviour
         myAnim.SetFloat("speed", Mathf.Abs(move));
         myRB.velocity = new Vector2(move * maxSpeed, myRB.velocity.y);
 
+        /*if (move > 0 && !playedGallop)
+        {
+            horseAS.PlayOneShot(horseGallop);
+            playedGallop = !playedGallop;
+        }*/
+
         if(move > 0 && !facingRight)
         {
             flip();
@@ -65,9 +76,11 @@ public class horseController : MonoBehaviour
         isGrounded = Physics2D.OverlapCircle(checkGround.position, groundCheckRadius, groundLayer);
         myAnim.SetBool("isGrounded", isGrounded);
         myAnim.SetFloat("verticalSpeed", myRB.velocity.y);
+            
 
         if (!alive)
         {
+            myRB.velocity = new Vector2(0, myRB.velocity.y);
             lostScreen.color = lostColor;
             //Destroy(gameObject);
             restartNow = true;
@@ -77,26 +90,28 @@ public class horseController : MonoBehaviour
 
         if (restartNow && resetTime <= Time.time)
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
         if (foundTheOwner)
         {
             myAnim.SetBool("canBend", foundTheOwner);
-            owner = gameObject.GetComponent<touchTheHorse>();
-            owner.setHorseHasBended(true);
-            
-            // make it impossible to move
+            myRB.velocity = new Vector2(0, myRB.velocity.y);
+            winningScreen.color = winningColor;
         }
 
     }
 
     void flip()
     {
-        facingRight = !facingRight;
-        Vector3 updateScale = transform.localScale;
-        updateScale.x *= -1;
-        transform.localScale = updateScale;
+        if (!foundTheOwner)
+        {
+            facingRight = !facingRight;
+            Vector3 updateScale = transform.localScale;
+            updateScale.x *= -1;
+            transform.localScale = updateScale;
+        }
+       
     }
 
     public void setAlive(bool isAlive)
@@ -109,7 +124,14 @@ public class horseController : MonoBehaviour
         foundTheOwner = found;
     }
 
-
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Owner")
+        {
+            ownerController owner = collision.gameObject.GetComponent<ownerController>();
+            owner.setHorseHasBended(true);
+        }
+    }
 
 
 }
