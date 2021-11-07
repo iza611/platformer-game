@@ -65,10 +65,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\cameraFollowTheHorse.cs" />
+    <Compile Include="Assets\chaseHorse.cs" />
     <Compile Include="Assets\horseController.cs" />
     <Compile Include="Assets\killTheHorse.cs" />
     <Compile Include="Assets\nextLevel.cs" />
     <Compile Include="Assets\restartGame.cs" />
+    <Compile Include="Assets\wizardController.cs" />
     <None Include="Assets\Sprites\EVil Wizard 2\License.txt" />
     <None Include="Assets\Sprites\parallax_mountain_pack\license.txt" />
     <Reference Include="Unity.Timeline.Editor">
