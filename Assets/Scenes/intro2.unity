@@ -284,6 +284,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4194067715189135263, guid: 0a796ab1ae462e04b85cda502d5b8576,
+        type: 3}
+      propertyPath: m_Text
+      value: "Description:\r\n\r\nThis is a platformer game consisting of 3 levels.
+        The player takes on the Stallion character and has to pass all 3 levels to
+        find the Stallion's Owner at the end. In the 3rd level, he has to run from
+        the final boss - Evil Wizard.\r\n\r\nRules:\r\n\r\n- to move horizontally
+        click 'a' (to move the Stallion to the left) and 'd' (to move the Stallion
+        to the right) \r\n- to jump click 'space'\r\n- avoid fluid obstacles, falling
+        down and wizard on 3rd level since they kill the Stallion\r\n- when you die
+        you restart the currect level \r\n- you can exit the game at any point by
+        clicking the 'X' button on the top right corner or by clicking 'Esc' on your
+        keyboard\r\n\r\nTarget audience: kids, fantasy fans"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4194067715189135263, guid: 0a796ab1ae462e04b85cda502d5b8576,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4194067715189135263, guid: 0a796ab1ae462e04b85cda502d5b8576,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4194067715189135263, guid: 0a796ab1ae462e04b85cda502d5b8576,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 1cc8cc758078b424383f0e913678a894,
+        type: 3}
+    - target: {fileID: 4399681642998418295, guid: 0a796ab1ae462e04b85cda502d5b8576,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 6.7
+      objectReference: {fileID: 0}
     - target: {fileID: 6407727172040881264, guid: 0a796ab1ae462e04b85cda502d5b8576,
         type: 3}
       propertyPath: m_Name
@@ -438,41 +473,6 @@ PrefabInstance:
       propertyPath: m_FontData.m_FontSize
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 4399681642998418295, guid: 0a796ab1ae462e04b85cda502d5b8576,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 6.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4194067715189135263, guid: 0a796ab1ae462e04b85cda502d5b8576,
-        type: 3}
-      propertyPath: m_Text
-      value: "Description:\r\n\r\nThis is a platformer game consisting of 3 levels.
-        The player takes on the Stallion character and has to pass all 3 levels to
-        find the Stallion's Owner at the end. In the 3rd level, he has to run from
-        the AI enemy - Evil Wizard.\r\n\r\nRules:\r\n\r\n- to move horizontally click
-        'a' (to move the Stallion to the left) and 'd' (to move the Stallion to the
-        right) \r\n- to jump click 'space'\r\n- avoid fluid obstacles, falling down
-        and wizard on 3rd level since they kill the Stallion\r\n- when you die you
-        restart the currect level \r\n- you can exit the game at any point by clicking
-        the 'X' button on the top right corner or by clicking 'Esc' on your keyboard\r\n\r\nTarget
-        audience: fantasy fans"
-      objectReference: {fileID: 0}
-    - target: {fileID: 4194067715189135263, guid: 0a796ab1ae462e04b85cda502d5b8576,
-        type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 4194067715189135263, guid: 0a796ab1ae462e04b85cda502d5b8576,
-        type: 3}
-      propertyPath: m_FontData.m_Alignment
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4194067715189135263, guid: 0a796ab1ae462e04b85cda502d5b8576,
-        type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: 1cc8cc758078b424383f0e913678a894,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a796ab1ae462e04b85cda502d5b8576, type: 3}
 --- !u!1001 &2076710361
