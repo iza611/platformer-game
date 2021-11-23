@@ -539,6 +539,21 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6243014131474613009, guid: 6e8170edb477f304e96d0f0a2a9df6b9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 708601482}
+    - target: {fileID: 6243014131474613009, guid: 6e8170edb477f304e96d0f0a2a9df6b9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: quitGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 6243014131474613009, guid: 6e8170edb477f304e96d0f0a2a9df6b9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e8170edb477f304e96d0f0a2a9df6b9, type: 3}
 --- !u!1001 &95101202
@@ -1650,6 +1665,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ac2ab790df12db4a96da9d03733832e, type: 3}
+--- !u!114 &708601482 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7303239364513313821, guid: 6ac2ab790df12db4a96da9d03733832e,
+    type: 3}
+  m_PrefabInstance: {fileID: 708601481}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00e40432d14dda1468821bc9cf2a2d22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &744745649
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2808,7 +2835,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6eb7b3205d951b446891f94e3971d52b, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.494
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -3906,7 +3933,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1ba05f0099cdfc5449db91d7b6e34e17, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f9ab5bf89f0d0ba42be7fc2e8206e3bb, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -3914,7 +3941,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 157
+  Priority: 0
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -4512,7 +4539,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 3b2d7008904a5b14fb5b98fd2344d8b9, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.647
+  m_Volume: 0.387
   m_Pitch: 1
   Loop: 0
   Mute: 0

@@ -11,9 +11,6 @@ public class horseController : MonoBehaviour
 
     bool facingRight;
     public float maxSpeed;
-   /* public AudioClip horseGallop;
-    AudioSource horseAS;
-    bool playedGallop = false;*/
 
     bool isGrounded = true;
     public float jumpHeight;
@@ -59,11 +56,6 @@ public class horseController : MonoBehaviour
         myAnim.SetFloat("speed", Mathf.Abs(move));
         myRB.velocity = new Vector2(move * maxSpeed, myRB.velocity.y);
 
-        /*if (move > 0 && !playedGallop)
-        {
-            horseAS.PlayOneShot(horseGallop);
-            playedGallop = !playedGallop;
-        }*/
 
         if(move > 0 && !facingRight)
         {
