@@ -3,4 +3,4 @@ A short platformer about a magical horse escaping a wizard who wants his very sp
 
 You can check out [video](video.mp4) to see a bit of the gameplay.
 
-The source code can be found at [platformer-game. ](https://github.com/iza611/platformer-game)
+The build can be found at [platformer-game. ](https://github.com/iza611/platformer-game)
